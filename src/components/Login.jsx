@@ -48,7 +48,7 @@ const Login = () => {
                 className="text-pink-500 text-bold "
                 onClick={() => navigate("/forgetpassword")}
               >
-                Forget Password
+                Forget/Reset Password
               </span>
             </p>
             <div className=" max-w-xs mt-3 pt-2 pb-2">
