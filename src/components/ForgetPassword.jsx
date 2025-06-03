@@ -3,9 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
-   const [password, setPassword] = useState("");
+   const [newpassword, setNewPassword] = useState("");
   const navigate = useNavigate();
-  console.log(email);
+
+  const handleForget = ()=>{
+      console.log(email);
+      console.log("new Password: ",newpassword)
+  }
+  
   return (
     <div className="flex justify-center items-center h-screen ">
       <div className="card bg-base-100  shadow-xl ">
@@ -38,14 +43,14 @@ const ForgetPassword = () => {
                 type="password"
                 placeholder="Create your new password"
                 className="input input-bordered w-full max-w-xs mt-1"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setNewPassword(e.target.value)}
                 required
               />
             </div>
 
           <button
             className="btn mt-5  border-none w-full bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 text-white transition-all duration-500 ease-in-out  hover:bg-gradient-to-r hover:from-purple-500 hover:via-yellow-500 hover:to-pink-500"
-            // onClick={}
+            onClick={handleForget}
           >
             Login
           </button>
